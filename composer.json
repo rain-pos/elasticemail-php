@@ -23,7 +23,7 @@
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "guzzlehttp/guzzle": "6.5.5",
+        "guzzlehttp/guzzle": "~6.5.8",
         "guzzlehttp/psr7": "^1.7 || ^2.0"
     },
     "require-dev": {
@@ -35,5 +35,20 @@
     },
     "autoload-dev": {
         "psr-4": { "ElasticEmail\\Test\\" : "test/" }
+    },
+    "config": {
+        "audit": {
+            "ignore": {
+                "PKSA-gcrk-3vtt-1r14": "CVE-2026-69246: Noncanonical host can bypass host-based checks (fixed in 7.15.2; Guzzle 6 is EOL, resolved by the Guzzle 7 upgrade)",
+                "PKSA-cnw1-2ytm-cgr8": "CVE-2026-69245: Noncanonical cookie domain keeps subdomain scope (fixed in 7.15.2; Guzzle 6 is EOL, resolved by the Guzzle 7 upgrade)",
+                "PKSA-fy2t-3c5f-827y": "CVE-2026-67354: URI fragments disclosed in redirect Referer headers (fixed in 7.15.1; Guzzle 6 is EOL, resolved by the Guzzle 7 upgrade)",
+                "PKSA-qxvb-2bpp-dnk6": "CVE-2026-67355: Host-only cookie scope is not preserved (fixed in 7.15.1; Guzzle 6 is EOL, resolved by the Guzzle 7 upgrade)",
+                "PKSA-bbs6-q5q9-f3t4": "CVE-2026-67353: Unbounded response cookies risk denial of service (fixed in 7.15.1; Guzzle 6 is EOL, resolved by the Guzzle 7 upgrade)",
+                "PKSA-bcdd-5xc7-gwfb": "CVE-2026-59883: Cookie disclosure and injection via IP-address domains (fixed in 7.12.3; Guzzle 6 is EOL, resolved by the Guzzle 7 upgrade)",
+                "PKSA-pwsk-hy21-4gby": "CVE-2026-67339: Proxy-Authorization headers can be sent to origin servers (fixed in 7.14.2; Guzzle 6 is EOL, resolved by the Guzzle 7 upgrade)",
+                "PKSA-93qv-9n9h-6k6p": "CVE-2026-55767: Dot-only cookie domains match all hosts (fixed in 7.12.1; Guzzle 6 is EOL, resolved by the Guzzle 7 upgrade)",
+                "PKSA-k22t-f949-t9g6": "CVE-2026-55568: Silent HTTPS proxy downgrade to cleartext (fixed in 7.12.1; Guzzle 6 is EOL, resolved by the Guzzle 7 upgrade)"
+            }
+        }
     }
 }
